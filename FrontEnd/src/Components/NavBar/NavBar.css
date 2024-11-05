@@ -1,0 +1,42 @@
+.NavbarContainer {
+    display: flex;
+    border: solid 2px;
+    background-color: skyblue;
+}
+
+.NavBar {
+    display: flex;
+    justify-content: space-between; /* Place left and right elements on opposite ends */
+    width: 100%; /* Ensures it spans the full width of NavbarContainer */
+}
+
+.leftelements {
+    display: flex;
+    justify-content: flex-start; /* Aligns left elements to the start */
+}
+
+.rightelements {
+    display: flex;
+    margin-left: auto; /* Pushes right elements to the far right */
+    gap: 10px; /* Adds spacing between items within rightelements */
+}
+
+.NavbarContainer button{
+    background: none; /* Removes default button background */
+    border: none; /* Removes default button border */
+    color: inherit; /* Matches button text color with the navbar */
+    padding: 10px 15px; /* Adds padding for clickability */
+    font-size: 1rem; /* Adjusts font size */
+    cursor: pointer;
+
+}
+button:focus, button:hover {
+    outline: none; /* Removes outline on focus */
+    background-color: rgba(255, 255, 255, 0.2); /* Optional: adds a slight hover effect */
+}
+
+.ProfileImage {
+    width: 30px; /* Adjust size as needed */
+    height: 30px;
+    border-radius: 50%; /* Makes the image circular */
+}

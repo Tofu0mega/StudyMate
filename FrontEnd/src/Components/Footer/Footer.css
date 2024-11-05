@@ -1,0 +1,20 @@
+.footer {
+    background-color: #f1f1f1;
+    padding: 20px;
+    text-align: center;
+    color: #333;
+    font-size: 1rem;
+}
+
+.footer-bar {
+    width: 100%; /* Full-width */
+    height: 2px; /* Thin horizontal bar */
+    background-color: #ccc; /* Gray color for the bar */
+    margin-bottom: 20px; /* Space below the bar */
+}
+
+.footer h1 {
+    margin: 0;
+    font-size: 1.25rem;
+    font-weight: normal;
+}
