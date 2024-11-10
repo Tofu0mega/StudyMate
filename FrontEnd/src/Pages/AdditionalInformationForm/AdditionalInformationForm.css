@@ -1,0 +1,70 @@
+.formBody {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px; /* Space between elements */
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.formBody h1 {
+    font-size: 20px;
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.formBody h2 {
+    font-size: 16px;
+    color: #555;
+    align-self: flex-start;
+    margin: 5px 0;
+}
+
+.formBody input[type="text"],
+.formBody input[type="date"],
+.formBody select,
+.formBody input[type="file"] {
+    width: 80%; /* Match width with other inputs */
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+.formBody .SubmitButton {
+    width: 80%; /* Match width with other inputs */
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: rgb(0, 255, 213); /* Button color */
+    color: #007bff;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.formBody .SubmitButton:hover {
+    background-color: rgba(0, 123, 255, 0.1); /* Light highlight on hover */
+    color: #0056b3; /* Darker color on hover */
+}
+.imagePreview {
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.imagePreview img {
+    width: 100px; /* Set preview image width */
+    height: 100px; /* Set preview image height */
+    object-fit: cover; /* Maintain aspect ratio */
+    border-radius: 50%; /* Circular preview */
+    border: 2px solid #ccc;
+}
+
+.ErrorContainer{   
+    color: red !important; /* Style for error messages */
+}

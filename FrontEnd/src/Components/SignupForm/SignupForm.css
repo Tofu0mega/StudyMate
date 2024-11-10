@@ -1,0 +1,60 @@
+.SignupFormContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px; /* Space between elements */
+}
+
+.SignupFormContainer input {
+    width: 80%; /* Set a reasonable width for input fields */
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.ConfirmButton {
+    width: 80%; /* Match width with inputs */
+    padding: 10px;
+    border: none; /* Remove default border */
+    border-radius: 5px;
+    background-color: rgb(0, 255, 213); /* Transparent background */
+    color: #031930; /* Button color to blend with text */
+    font-size: 16px;
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s, color 0.3s; /* Smooth transition for hover effect */
+}
+
+.ConfirmButton:hover {
+    background-color: rgba(0, 123, 255, 0.1); /* Light highlight on hover */
+    color: #0006b3; /* Darker text color on hover */
+}
+
+.ErrorContainer {
+    color: red; /* Style for error messages */
+}
+
+.LoginPrompt {
+    display: flex;
+    align-items: center; /* Center the items vertically */
+    justify-content: center; /* Center the items horizontally */
+}
+
+.SignupFormContainer h1 {
+    margin: 0; /* Remove default margin */
+    font-size: 16px; /* Font size */
+}
+
+.LoginPromptButton {
+    background: none; /* No background */
+    border: none; /* No border */
+    color: #007bff; /* Color to blend with text */
+    font-size: 16px; /* Match font size with other text */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: color 0.3s; /* Smooth transition for hover effect */
+    margin-left: 5px; /* Space between text and button */
+}
+
+.LoginPromptButton:hover {
+    color: #0056b3; /* Darker text color on hover */
+}

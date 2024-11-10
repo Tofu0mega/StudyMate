@@ -1,8 +1,44 @@
 import React, { useState, useEffect } from "react";
 import "./NavBar.css";
+import { ImageHolder } from "../../utils/utils";
+import { GETDATA } from "../../utils/APICalls";
 
 export default function NavBar() {
   const [IsLoggedIn, setIsLoggedIn] = useState(false);
+  const [UserId, setUserId] = useState();
+  const [UserName, setUserName] = useState();
+  const [ProfilePictureUrl, setProfilePictureUrl] = useState();
+
+  useEffect(()=>{
+    const Id=localStorage.getItem("UserId")
+    const getuserdata=async()=>{
+
+      const response= await GETDATA(`users/${Id}`)
+      const data=await response.json()
+      setUserName(data.Username)
+      setProfilePictureUrl(data.ProfilePicture)
+
+
+    }
+    getuserdata()
+    
+    if(Id){
+      setUserId(Id)
+      setIsLoggedIn(true)
+    }else{
+      setUserId('')
+      setIsLoggedIn(false)
+    }
+
+  },[])
+  const handleLogout=()=>{
+
+    setUserId('')
+    setIsLoggedIn(false)
+    localStorage.removeItem("UserId")
+    window.location.href='/Login'
+  }
+  
 
   return (
     <div className="NavbarContainer">
@@ -34,14 +70,12 @@ export default function NavBar() {
             <>
               <button
                 className="logout"
-                onClick={() => {
-                  window.location.href = "/Logout";
-                }}
+                onClick={handleLogout}
               >
                 Logout
               </button>
               <img
-                src="https://placehold.co/300x300"
+                src={ProfilePictureUrl}
                 alt="ProfileImage"
                 className="ProfileImage"
               />
@@ -51,7 +85,7 @@ export default function NavBar() {
                   window.location.href = "/Profile";
                 }}
               >
-                Profile
+                {UserName}
               </button>
             </>
           )}
