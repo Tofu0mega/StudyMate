@@ -61,10 +61,10 @@ export default function AdditionalInformationForm() {
                 `users/adddetails/${userid}`,
                 userdata
             );
-            console.log(1)
-      console.log(response)
+          
+     
       if (response.ok) {
-          console.log(1)
+        
           window.location.href = "/Home";
         } else {
             const data = await response.json();
@@ -73,7 +73,7 @@ export default function AdditionalInformationForm() {
     };
     handledatasubmit();
 }catch(e){
-    console.log(e)
+   
 }
 };
 

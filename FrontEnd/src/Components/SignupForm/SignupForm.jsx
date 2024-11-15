@@ -18,25 +18,43 @@ export default function SignupForm() {
       setError("Username is required.");
       return;
     }
+    
+    if (UserName.length <= 6) {
+      setError("Username must be longer than 6 characters.");
+      return;
+    }
+    
+    if (!/^[a-zA-Z0-9!@#$%^&*(),.?":{}|<>]*$/.test(UserName)) {
+      setError("Username must be alphanumeric (symbols allowed).");
+      return;
+    }
+    
     if (!Email) {
       setError("Email is required.");
       return;
     }
-    if (!Password) {
-      setError("Password is required.");
-      return;
-    }
-
+    
     if (!emailRegex.test(Email)) {
       setError("Invalid Email Format");
       return;
     }
-
-    if (Password !== ConfirmPassword) {
-      setError("Passwords Dont Match");
-
+    
+    if (!Password) {
+      setError("Password is required.");
       return;
     }
+    
+    if (Password.length <= 8) {
+      setError("Password must be longer than 8 characters.");
+      return;
+    }
+   
+    
+    if (Password !== ConfirmPassword) {
+      setError("Passwords don't match.");
+      return;
+    }
+    
 
     const userData = {
       Email: Email,
@@ -52,7 +70,7 @@ export default function SignupForm() {
 
       }else{
         const data=await response.json()
-        console.log(data)
+       
         setError(data.message)
       }
     };

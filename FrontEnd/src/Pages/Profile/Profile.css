@@ -1,0 +1,143 @@
+/* General container */
+.profile-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #6e7bff, #3a4df0);
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+/* Profile card container */
+.profileshowcard {
+    background: #fff;
+    border-radius: 20px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+    width: 600px;  /* Increased width */
+    max-width: 90%; /* Ensures it’s responsive */
+    padding: 40px; /* Increased padding for more space */
+    text-align: center;
+    font-family: 'Arial', sans-serif;
+    overflow: hidden;
+    transform: translateY(0);
+    transition: transform 0.3s ease-in-out;
+}
+
+.profileshowcard:hover {
+    transform: translateY(-10px);
+}
+
+/* Header section with profile picture */
+.profile-header {
+    margin-bottom: 30px; /* Increased margin */
+}
+
+/* Profile picture circle */
+.profile-picture {
+    width: 150px;  /* Increased profile picture size */
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid #3a4df0;
+    margin-bottom: 20px; /* Increased margin */
+    transition: transform 0.3s ease;
+}
+
+.profile-picture:hover {
+    transform: scale(1.1);
+}
+
+/* Placeholder for missing profile picture */
+.profile-picture-placeholder {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background: #f2f2f2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #3a4df0;
+    font-size: 22px; /* Larger placeholder font */
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+/* User name and role */
+.profile-header h2 {
+    font-size: 28px;  /* Increased font size */
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px; /* Increased margin */
+    transition: color 0.3s ease;
+}
+
+.profile-header h2:hover {
+    color: #3a4df0;
+}
+
+.profile-header p {
+    font-size: 16px; /* Larger font size for role */
+    color: #777;
+    font-weight: 600;
+}
+
+/* Profile details section */
+.profile-details {
+    margin-top: 30px; /* Increased margin */
+    font-size: 16px;  /* Larger font size for details */
+    color: #555;
+}
+
+/* Each profile detail item */
+.profile-details p {
+    margin: 15px 0;  /* Increased margin */
+    transition: color 0.3s ease;
+}
+
+.profile-details p:hover {
+    color: #3a4df0;
+}
+
+.profile-details strong {
+    font-weight: 600;
+    color: #333;
+}
+
+/* Button style for logout or other actions */
+.profile-action-btn {
+    background-color: #3a4df0;
+    color: #fff;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 25px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 30px; /* Increased margin */
+}
+
+.profile-action-btn:hover {
+    background-color: #6e7bff;
+}
+
+/* Media query for mobile responsiveness */
+@media (max-width: 768px) {
+    .profileshowcard {
+        width: 100%;
+        padding: 25px;
+    }
+
+    .profile-picture {
+        width: 130px;
+        height: 130px;
+    }
+
+    .profile-header h2 {
+        font-size: 24px;
+    }
+
+    .profile-details p {
+        font-size: 14px;
+    }
+}

@@ -15,12 +15,12 @@ export default function LoginForm() {
       Password: Password,
     };
     const loginredirect= ()=>{
-      console.log(1)
+     
       const datafetch=async ()=>{
         const userid=localStorage.getItem("UserId")
         const response= await GETDATA(`users/${userid}`)
         const data= await response.json()
-        console.log(data)
+        
         if(data.IsFirstLogin){
           window.location.href='/AdditionalInformationForm'
 
@@ -42,13 +42,13 @@ export default function LoginForm() {
       if(response.ok){
         const data=await response.json()
         const {_id}=data
-        console.log(_id)
+        
         localStorage.setItem("UserId",_id)
         loginredirect();
 
       }else{
         const data=await response.json()
-        console.log(data)
+      
         setError(data.message)
       }
     };

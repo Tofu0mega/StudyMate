@@ -2,7 +2,7 @@ import User from "../Models/Users.js";
 import {uploadImage} from "../Middlewares/ImageUploader.js"
 
 export async function getuser(req, res) {
-  console.log(1)
+  
     const existingUser = await User.findById(req.params.userId ).lean();
   
     if (existingUser) {

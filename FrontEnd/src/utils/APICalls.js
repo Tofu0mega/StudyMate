@@ -23,7 +23,7 @@ export const POSTDATA=async(Endpoint,data)=>{
       },
       body: JSON.stringify(data),
     });
-    console.log(1)
+  
     return response
   }catch(e){
     console.log(e)
