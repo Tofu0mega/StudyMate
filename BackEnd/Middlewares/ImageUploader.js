@@ -1,4 +1,5 @@
 import cloudinary from 'cloudinary';
+import { createCanvas } from 'canvas';
 
 
 
@@ -14,3 +15,4 @@ export async function uploadImage(banner) {
         throw new Error('Failed to upload image');
     }
 }
+

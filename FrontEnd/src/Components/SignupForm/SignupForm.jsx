@@ -19,7 +19,7 @@ export default function SignupForm() {
       return;
     }
     
-    if (UserName.length <= 6) {
+    if (UserName.length < 6) {
       setError("Username must be longer than 6 characters.");
       return;
     }
