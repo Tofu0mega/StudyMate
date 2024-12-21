@@ -12,4 +12,5 @@ const router = Router();
 
 router.get(`/:userId`,users.getuser)
 router.post(`/adddetails/:userId`,users.adddetails)
+router.get("/getSubject/:userId",users.getUserSubjects)
 export default router;

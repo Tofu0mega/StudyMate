@@ -8,6 +8,7 @@ import Login from "./Pages/Login/Login";
 import Signup from "./Pages/Signup/Signup";
 import AdditionalInformationForm from "./Pages/AdditionalInformationForm/AdditionalInformationForm";
 import Profile from "./Pages/Profile/Profile";
+import AddSubjectForm from "./Components/AddSubjectForm/AddSubjectForm";
 
 function App() {
 
@@ -31,6 +32,7 @@ function App() {
           <Route path ="/Signup" element={<Signup/>}/>
           <Route path ="/AdditionalInformationForm" element={<AdditionalInformationForm/>}/>
           <Route path ="/Profile" element={<Profile/>}/>
+          <Route path ="/AddSubjectForm" element={<AddSubjectForm/>}/>
         </Routes>
       </Router>
 

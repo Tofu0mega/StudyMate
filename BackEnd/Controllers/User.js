@@ -45,3 +45,28 @@ export async function getuser(req, res) {
       console.log(e)
     }
   }
+
+  export const getUserSubjects = async (req, res) => {
+    try {
+        const { userId } = req.params;
+
+        // Validate user ID
+        if (!userId) {
+            return res.status(400).json({ message: 'User ID is required.' });
+        }
+
+        // Find the user and populate the Subjects array
+        const user = await User.findById(userId).populate('Subjects');
+        if (!user) {
+            return res.status(404).json({ message: 'User not found.' });
+        }
+
+        res.status(200).json({ 
+            message: 'User subjects retrieved successfully.', 
+            subjects: user.Subjects 
+        });
+    } catch (error) {
+        console.error('Error fetching user subjects:', error);
+        res.status(500).json({ message: 'Internal server error.' });
+    }
+};

@@ -15,7 +15,8 @@ const UserSchema = new mongoose.Schema({
     },
     dob: { type: Date },
     gender: { type: String }, 
-    dateOfJoining: { type: Date, default: Date.now } 
+    dateOfJoining: { type: Date, default: Date.now } ,
+    Subjects: [{ type: mongoose.Schema.Types.ObjectId, ref: 'Subject' }], 
 });
 
 const User = mongoose.model('Users', UserSchema);
