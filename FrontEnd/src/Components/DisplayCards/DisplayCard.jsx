@@ -3,11 +3,11 @@ import { useNavigate } from 'react-router-dom';
 import './DisplayCard.css';
 import { POSTDATA } from '../../utils/APICalls';
 
-const DisplayCard = ({ subjectName, subjectCode, subjectId, onDelete }) => {
+const DisplayCard = ({ subjectName, subjectCode, subjectId, onDelete , displayType }) => {
   const navigate = useNavigate();
 
   const handleClick = () => {
-    navigate(`/${subjectId}`);
+    navigate(`/${displayType}/${subjectId}`);
   };
 
   const handleDelete = (event) => {

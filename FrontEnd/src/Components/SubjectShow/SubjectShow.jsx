@@ -59,6 +59,7 @@ export default function SubjectShow({ showtype }) {
             subjectCode={subject.code}
             subjectId={subject._id}
             onDelete={handleDelete}
+            displayType={"Subject"}
           />
         ))}
       </div>
